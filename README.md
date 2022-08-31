@@ -5,6 +5,7 @@ A taxi carrier has collected historical data on taxi orders at airports. To attr
 На основе собранных данных:
 * данные лежат в файле taxi.csv
 * количество заказов находится в столбце num_orders
+
 протестировать несколько моделей регрессии и выбрать лучшую по метрике RMSE. Условие - на тестовой выборке выбранная модель должна показать RMSE не больше 48
 
 ## План проекта:
@@ -22,7 +23,9 @@ A taxi carrier has collected historical data on taxi orders at airports. To attr
 * по результатам кросс-валидации:
 > 
 > RMSE RandomForestRegressor cv_mean_score = 29.05
+> 
 > RMSE CatBoostRegressor cv_best_score = 32.04
+> 
 > RMSE LGBMRegressor cv_best_score = 29.43
 >
 победила модель RandomForestRegressor с подобранными гиперпараметрами (max_depth=14, min_samples_leaf=3, n_estimators=84, random_state=123)
